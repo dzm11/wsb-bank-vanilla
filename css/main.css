@@ -25,11 +25,11 @@ ul {
 .hero-wrapper {
   text-align: center;
   background: url("../img/bg-hero.svg");
-  background-size: cover;
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 36em;
+  height: 37em;
+  margin: 0em 1em 2em 1em;
 }
 
 .wrapper {
@@ -39,12 +39,16 @@ ul {
 }
 
 header {
+  background: url("../img/sygnet.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -64,59 +68,8 @@ header ul li a {
   padding: 0 .6em;
 }
 
-/*header{
-
-}
-.logo{
-    width: 5rem;
-            }
-nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.menu-icons {
-    font-size: 2em;
-    cursor: pointer;
-}
-
-.close{
-    color: white;
-}
-.nav-list{
-    width: 20rem;
-    height: 100vh;
-    background-color: #ff7631;
-    position: fixed;
-    top: 0;
-    right: -20rem;
-    z-index: 1500;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 650ms ease-in-out;
-}
-
-.nav-list.active{
-    right: 0;
-}
-
-.close{
-    position: absolute;
-    top: .5em;
-    left: .5em;
-}
-.nav-item{
-margin: 1em 0;
-}
-.nav-link{
-color: white;
-}
-*/
 .hero-content {
-  margin: 5em 0 2em;
+  margin: 4em 0 2em;
 }
 
 .hero-content h1 {
@@ -146,6 +99,7 @@ color: white;
 }
 
 .orange-box {
+  padding: 1.4em 0;
   background-color: #ff7631;
   text-align: center;
 }
@@ -162,19 +116,23 @@ color: white;
   font-size: 1em;
 }
 
+.orange-box h2 br {
+  display: none;
+}
+
 .icon {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 3em;
-}
-
-.icon li {
-  margin-bottom: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .icon img {
@@ -194,15 +152,85 @@ color: white;
   font-size: 1em;
 }
 
-@media (min-width: 478px) {
+@media (min-width: 550px) {
+  header {
+    background: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .wrapper {
     padding: 1.5em 4em;
   }
   .hero-wrapper {
     text-align: left;
   }
-  .hero-content {
-    margin-right: 10em;
+  .orange-box h2 br {
+    display: block;
+  }
+}
+
+@media (min-width: 850px) {
+  body {
+    font-size: 18px;
+  }
+  .hero-content h1 {
+    font-size: 1.9em;
+  }
+  .hero-content .subtitle {
+    font-size: 1em;
+  }
+  .hero-wrapper {
+    margin-bottom: 3em;
+  }
+  .wrapper {
+    padding: 1.5em 1.5em 1.5em 1.5em;
+  }
+  .test {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .orange-box h1 {
+    font-size: 1.9em;
+  }
+  .orange-box h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1150px) {
+  .icon {
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .hero-content .subtitle {
+    font-size: 1.3em;
+  }
+  .hero-wrapper {
+    background-size: 60em;
+    height: 45em;
+  }
+  .test {
+    margin-top: 3em;
   }
 }
 /*# sourceMappingURL=main.css.map */
