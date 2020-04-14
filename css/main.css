@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -29,20 +29,7 @@ ul {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100vh;
-}
-
-.hero-wrapper h1 {
-  color: #333;
-  font-weight: 700;
-  font-size: 1.4em;
-}
-
-.hero-wrapper .subtitle {
-  color: #333;
-  font-weight: 400;
-  font-size: 1em;
-  margin-bottom: 0;
+  height: 36em;
 }
 
 .wrapper {
@@ -58,10 +45,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header .logo {
-  font-weight: bold;
+header .sygnet {
+  width: 3em;
 }
 
 header ul {
@@ -74,20 +64,84 @@ header ul li a {
   padding: 0 .6em;
 }
 
+/*header{
+
+}
+.logo{
+    width: 5rem;
+            }
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-icons {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.close{
+    color: white;
+}
+.nav-list{
+    width: 20rem;
+    height: 100vh;
+    background-color: #ff7631;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 650ms ease-in-out;
+}
+
+.nav-list.active{
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: .5em;
+    left: .5em;
+}
+.nav-item{
+margin: 1em 0;
+}
+.nav-link{
+color: white;
+}
+*/
 .hero-content {
-  margin: 4em 0 2em;
+  margin: 5em 0 2em;
+}
+
+.hero-content h1 {
+  color: #333;
+  font-weight: 900;
+  font-size: 1.6em;
+  line-height: 1.2em;
 }
 
 .hero-content .subtitle {
-  margin-bottom: 0;
+  color: #333;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 2em;
 }
 
 .hero-content .button1 {
-  background-color: #ff7631;
+  margin: 0;
+  background-color: #ff5a2f;
   color: white;
   border: none;
   padding: 1em 2em;
   border-radius: 38px;
+  font-size: 1em;
   cursor: pointer;
 }
 
@@ -138,5 +192,17 @@ header ul li a {
   margin-bottom: 1em;
   display: block;
   font-size: 1em;
+}
+
+@media (min-width: 478px) {
+  .wrapper {
+    padding: 1.5em 4em;
+  }
+  .hero-wrapper {
+    text-align: left;
+  }
+  .hero-content {
+    margin-right: 10em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
