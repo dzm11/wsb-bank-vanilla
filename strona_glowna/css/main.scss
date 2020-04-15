@@ -9,6 +9,7 @@ body {
     background: white;
     color: #333;
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 a {
@@ -26,11 +27,7 @@ ul{
 
  .hero-wrapper{
     text-align: center;
-    background: url('../img/bg-hero.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height: 37em;
+    height: 30em;
     margin: 0em 1em 2em 1em;
 }
 
@@ -65,8 +62,8 @@ header{
     margin: 4em 0 2em;
     h1{
         color: #333;
-        font-weight: 900;
-        font-size: 1.6em;
+        font-weight: bold;
+        font-size: 1.9em;
         line-height: 1.2em;
     }
     .subtitle{
@@ -89,13 +86,16 @@ header{
 }
 
 .orange-box{
-    padding: 1.4em 0;
-    background-color: #ff7631;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.4em 2em;
+    background-color: #fd5425;
     text-align: center;
-
+    height: 20em;
     h1{
         color: white;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 1.4em;
     }
     h2{
@@ -113,7 +113,7 @@ header{
 .icon{
     text-align: center;
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: space-around;
     margin-top: 3em;
@@ -124,6 +124,7 @@ header{
     }
 
     img{
+        
         margin-bottom: 1em;
         height: 7em;
     }
@@ -146,46 +147,51 @@ header{
     header{
         background: url('../img/logo.svg');
         background-repeat: no-repeat;
-        background-size: contain;
-        height: 3em;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        ul {
+            li a {
+                padding: 0 1em;
+            }
+        }
     }
     .wrapper{
         padding: 1.5em 4em;
     }
+    .background-wrapper{
+        height: 100%;
+        background: url('../img/bg-hero.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
     .hero-wrapper{
+
         text-align: left;
     }
     .orange-box{
-            h2{        
-                    br{
-                        display: block;
-                    }
-            }
+         h2{        
+             br{
+                 display: block;
+             }
+         }
 
     }
 }
 @media(min-width: 850px){
-    body{
-        font-size: 18px;
-    }
     .hero-content{
         h1{
-            font-size: 1.9em;
+            font-size: 2.2em;
         }
         .subtitle{
-            font-size: 1em;
+            font-size: 1.1em;
         }
     }
+
     .hero-wrapper{
-        margin-bottom:3em;
-    }
-    .wrapper {
-        padding: 1.5em 1.5em 1.5em 1.5em;
+        
+        height: 45em;
     }
     .test{
+        margin-top: 3em;
         display: flex;
         align-items: center;
     }
@@ -201,26 +207,18 @@ header{
 }
 @media(min-width: 1150px){
     .icon{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
 }
 @media(min-width:1200px){
     .hero-content{
-        h1{
-            font-size: 2.5em;
-        }
-        .subtitle{
-            font-size: 1.3em;
-        }
+        margin-top: 6em;
     }
     .hero-wrapper{
-        background-size: 60em;
-        height: 45em;
-
+        height: 650px;
     }
-    .test{
-        margin-top: 3em;
+    .background-wrapper{
+        background-size: 70%;
     }
 }

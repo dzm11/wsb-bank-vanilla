@@ -9,21 +9,23 @@
 </head>
 <body>
     <div class="container" id="container">
+      <div class="right-side">
+        <h2>Masz już konto?</h2> 
+        <a href="../login_2/login.html">Zaloguj się</a>
+    </div>
         <div class="form-container sign-up-container">
-          <form name="LoginAccount" action="login.php" method="post">
-                <h1>Zaloguj się</h1>
+            <form name="RegisterAccount" action="register.php" method="post">
+                <h1>Zarejestruj się</h1>
                 <div id="my-signin2"></div>
-                <span>lub zaloguj się za pomocą e-mail</span>
+                <span>lub zarejestruj się za pomocą e-mail</span>
                 <input type="email" placeholder="Email" autocomplete="on" required/>
-                <input type="password" placeholder="Hasło" autocomplete="on" required/>
-                <button>Zaloguj się</button>
+                <input type="password" placeholder="Hasło" autocomplete="on" id="password" required/>
+                <input type="password" placeholder="Potwierdź hasło" id="confirm_password" required/>
+                <button>Zarejestruj się</button>
                 <span>Akceptuję regulamin i zgadzam się na wszystkie warunki.</span>
             </form>
         </div>
-        <div class="right-side">
-            <h2>lub jeśli jescze nie masz konta...</h2> 
-            <a href="../rejestracja/rejestracja.html">Zarejestruj sie</a>
-        </div>
+
     </div>
     <script>
         function onSuccess(googleUser) {
@@ -44,9 +46,11 @@
           });
         }
       </script>
-    
+
+      
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-</body>
+      <script src="../rejestracja/js/script.js"></script>
+    </body>
 </html>
 
 

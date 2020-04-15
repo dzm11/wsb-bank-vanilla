@@ -9,6 +9,7 @@ body {
   background: white;
   color: #333;
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 
 a {
@@ -26,11 +27,7 @@ ul {
 
 .hero-wrapper {
   text-align: center;
-  background: url("../img/bg-hero.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  height: 37em;
+  height: 30em;
   margin: 0em 1em 2em 1em;
 }
 
@@ -76,8 +73,8 @@ header ul li a {
 
 .hero-content h1 {
   color: #333;
-  font-weight: 900;
-  font-size: 1.6em;
+  font-weight: bold;
+  font-size: 1.9em;
   line-height: 1.2em;
 }
 
@@ -101,14 +98,25 @@ header ul li a {
 }
 
 .orange-box {
-  padding: 1.4em 0;
-  background-color: #ff7631;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.4em 2em;
+  background-color: #fd5425;
   text-align: center;
+  height: 20em;
 }
 
 .orange-box h1 {
   color: white;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1.4em;
 }
 
@@ -126,7 +134,7 @@ header ul li a {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 1em;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -ms-flex-pack: distribute;
@@ -158,20 +166,19 @@ header ul li a {
   header {
     background: url("../img/logo.svg");
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 3em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  }
+  header ul li a {
+    padding: 0 1em;
   }
   .wrapper {
     padding: 1.5em 4em;
+  }
+  .background-wrapper {
+    height: 100%;
+    background: url("../img/bg-hero.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
   }
   .hero-wrapper {
     text-align: left;
@@ -182,22 +189,17 @@ header ul li a {
 }
 
 @media (min-width: 850px) {
-  body {
-    font-size: 18px;
-  }
   .hero-content h1 {
-    font-size: 1.9em;
+    font-size: 2.2em;
   }
   .hero-content .subtitle {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .hero-wrapper {
-    margin-bottom: 3em;
-  }
-  .wrapper {
-    padding: 1.5em 1.5em 1.5em 1.5em;
+    height: 45em;
   }
   .test {
+    margin-top: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -215,24 +217,20 @@ header ul li a {
 
 @media (min-width: 1150px) {
   .icon {
-    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
 @media (min-width: 1200px) {
-  .hero-content h1 {
-    font-size: 2.5em;
-  }
-  .hero-content .subtitle {
-    font-size: 1.3em;
+  .hero-content {
+    margin-top: 6em;
   }
   .hero-wrapper {
-    background-size: 60em;
-    height: 45em;
+    height: 650px;
   }
-  .test {
-    margin-top: 3em;
+  .background-wrapper {
+    background-size: 70%;
   }
 }
 /*# sourceMappingURL=main.css.map */
