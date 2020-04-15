@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Log-in</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" method="post">
+                <h1>Zaloguj się</h1>
+                <div id="my-signin2"></div>
+                <span>lub zaloguj się za pomocą e-mail</span>
+                <input type="email" placeholder="Email" autocomplete="on" required/>
+                <input type="password" placeholder="Hasło" autocomplete="on" required/>
+                <button>Zaloguj się</button>
+                <span>Akceptuję regulamin i zgadzam się na wszystkie warunki.</span>
+            </form>
+        </div>
+        <div class="right-side">
+            <h2>lub jeśli jescze nie masz konta...</h2> 
+            <button class="SignIn">Zarejestruj sie</button>
+        </div>
+    </div>
+    <script>
+        function onSuccess(googleUser) {
+          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+          console.log(error);
+        }
+        function renderButton() {
+          gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+          });
+        }
+      </script>
+    
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>
+
+
+        <!--<div class="form-container sign-in-container">
+            <form action="#" method="post">
+            <h1>Zarejestruj się</h1>
+            <button>Załóz konto za pomocą Gmail</button> 
+            <span>lub załóz konto normalnie</span>
+                <input type="text" placeholder="Imie i nazwisko">
+                <input type="email" placeholder="Email"/>
+                <input type="password" placeholder="Hasło">
+                <input type="password" placeholder="Powtórz hasło">
+
+                <button>Zarejestruj się</button>
+                <span>Akceptuję regulamin i zgadzam się
+                    na wszystkie warunki.</span>
+            </form>
+        </div>-->

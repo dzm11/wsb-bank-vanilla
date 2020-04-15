@@ -8,12 +8,14 @@ body {
     margin: 0;
     background: white;
     color: #333;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
-a{
+a {
     color: #333;
+    font-size: 14px;
     text-decoration: none;
+    margin: 15px 0;
 }
 
 ul{
@@ -75,14 +77,14 @@ header{
         margin-bottom: 2em;
     }
     .button1{
-        margin: 0;
-        background-color: #ff5a2f;
-        color: white;
+        border-radius: 20px;
         border: none;
-        padding: 1em 2em;
-        border-radius: 38px;
-        font-size: 1em;
-        cursor: pointer;
+        background: #fd5425;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
     }
 }
 
