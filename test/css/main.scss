@@ -99,8 +99,9 @@ header{
 }
 
 .hero-content{
-    margin: 4em 0 2em;
+    margin: 5em 0 0;
     h1{
+        margin-bottom: .7em;
         color: #333;
         font-weight: bold;
         font-size: 1.9em;
@@ -134,6 +135,7 @@ header{
     text-align: center;
     height: 20em;
     h1{
+        margin-bottom: .7em;
         color: white;
         font-weight: bold;
         font-size: 1.4em;
@@ -180,7 +182,7 @@ header{
 
 
 /* navbar mobile */
-@media (max-width:550px){
+@media (max-width:799px){
     header{
         display: block;
     }
@@ -216,11 +218,38 @@ header{
         justify-content: space-around;
         top: -5%;
         left: -20%;
-        
+        padding: 60px 0;
         a{ 
+            margin:0;
+            padding: 0;
             color: #fff;
         }
+        li{
+            .button1, .button2{
+                border: none;
+                background:none;
+                color: #fff;
+                font-size: 20px;
+                font-weight: normal;
+                padding: 0;
+                letter-spacing: 0;
+            }
+        }
     }
+
+li{
+    .button1, .button2{
+        border: none;
+        background:none;
+        color: #fff;
+        font-weight: normal;
+        padding: 0;
+        letter-spacing: 0;
+    }
+}
+
+
+
     .nav-links.open{
         clip-path: circle(1600px at 100% 0%);
         pointer-events: all;
@@ -232,63 +261,40 @@ header{
         opacity: 0;
       }
       .nav-links li a {
-        font-size: 25px;
+        font-size: 20px;
       }
       .nav-links li:nth-child(1) {
-        transition: all 0.5s ease 0.2s;
+        transition: all 0.5s ease 0.1s;
       }
       .nav-links li:nth-child(2) {
-        transition: all 0.5s ease 0.4s;
+        transition: all 0.5s ease 0.2s;
       }
       .nav-links li:nth-child(3) {
-        transition: all 0.5s ease 0.6s;
+        transition: all 0.5s ease 0.3s;
+      }
+      .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.4s;
+      }
+      .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.5s;
       }
       li.fade {
+        margin-left:0px;
         opacity: 1;
       }
 }
 /* koniec navbar mobile */
-
-@media(min-width: 550px){
-    header{
-        background: url('../img/sygnet.svg');
-        background-repeat: no-repeat;
-        justify-content: flex-end;
-        nav{
-            position: static;
-            display: flex;
-        }
-        ul {
-
-            li a {
-                padding: 0 1em;
+@media(min-width:500px){
+    .orange-box{
+        h2{        
+            br{
+                display: block;
             }
         }
-    }
-    .wrapper{
-        padding: 1.5em 4em;
-    }
-    .background-wrapper{
-        height: 100%;
-        background: url('../img/bg-hero.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        padding: 1.5em 1em;
-    }
-    .hero-wrapper{
 
-        text-align: left;
-    }
-    .orange-box{
-         h2{        
-             br{
-                 display: block;
-             }
-         }
-
-    }
+   }
 }
+
 @media(min-width: 660px){
     header{
         background: url('../img/logo.svg');
@@ -299,10 +305,36 @@ header{
         padding: 1.5em 2em;
         }
     }
+
+    @media(min-width: 800px){
+        header{
+            justify-content: flex-end;
+            nav{
+                position: static;
+                display: flex;
+            }
+        }
+        .wrapper{
+            padding: 1.5em 4em;
+        }
+        .background-wrapper{
+            height: 100%;
+            background: url('../img/bg-hero.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            padding: 1.5em 1em;
+        }
+        .hero-wrapper{
+    
+            text-align: left;
+        }
+    
+    }
 @media(min-width: 850px){
     .hero-content{
         h1{
-            font-size: 2.2em;
+            font-size: 2.1em;
         }
         .subtitle{
             font-size: 1.1em;
@@ -310,7 +342,7 @@ header{
     }
     .background-wrapper{
 
-        padding: 1.5em 4em;
+        padding: 1.5em 2em;
         
     }
     .hero-wrapper{
@@ -330,6 +362,14 @@ header{
             font-size: 1.3em;
         }
     }
+}
+@media(min-width: 1000px){
+    .background-wrapper{
+
+        padding: 1.5em 4em;
+        
+    }
+
 }
 @media(min-width: 1150px){
     .icon{
