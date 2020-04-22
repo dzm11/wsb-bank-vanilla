@@ -1,8 +1,14 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
+const line = document.querySelectorAll(".line");
 
 hamburger.addEventListener("click", () => {
+
+  line.forEach(line => {
+    line.classList.toggle("open");
+  });
+  
   navLinks.classList.toggle("open");
   links.forEach(link => {
     link.classList.toggle("fade");

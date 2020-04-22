@@ -191,8 +191,12 @@ header{
         height: 2px;
         background: #FF5B2E;
         margin: 5px;
+        transition: background-color .5s ease-in-out;
     }
-
+    .line.open{
+        background: #fff;
+        
+    }
     nav{
         position: relative;
     }
@@ -253,9 +257,6 @@ li{
     .nav-links.open{
         clip-path: circle(1600px at 100% 0%);
         pointer-events: all;
-    }
-    .landing{
-        flex-direction: column;
     }
     .nav-links li {
         opacity: 0;

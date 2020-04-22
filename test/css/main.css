@@ -216,6 +216,11 @@ header ul li a {
     height: 2px;
     background: #FF5B2E;
     margin: 5px;
+    -webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+  }
+  .line.open {
+    background: #fff;
   }
   nav {
     position: relative;
@@ -275,12 +280,6 @@ header ul li a {
     -webkit-clip-path: circle(1600px at 100% 0%);
             clip-path: circle(1600px at 100% 0%);
     pointer-events: all;
-  }
-  .landing {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .nav-links li {
     opacity: 0;
