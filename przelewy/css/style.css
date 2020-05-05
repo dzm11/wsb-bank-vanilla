@@ -40,7 +40,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("/strona_glowna/img/logo.svg");
+  background: url("../img/logo.svg");
   background-repeat: no-repeat;
 }
 
@@ -156,7 +156,7 @@ header ul li a {
 
 .card-content .card-image {
   width: 400px;
-  background-image: url("/przelewy/img/card-bg.svg");
+  background-image: url("../img/card-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -311,6 +311,8 @@ header ul li a {
 }
 
 .transfer form textarea {
+  resize: none;
+  outline: none;
   font-size: 16px;
   padding-top: 10px;
   padding-left: 10px;

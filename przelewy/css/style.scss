@@ -35,7 +35,7 @@ header{
     height: 3em;
     display: flex;
     align-items: center;
-    background: url('/strona_glowna/img/logo.svg');
+    background: url('../img/logo.svg');
     background-repeat: no-repeat;
 }
 nav{
@@ -126,7 +126,7 @@ header{
 
     .card-image{
         width: 400px;
-        background-image: url('/przelewy/img/card-bg.svg');
+        background-image: url('../img/card-bg.svg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
@@ -238,6 +238,8 @@ header{
             width: 100%;
         }
         textarea{
+            resize: none;
+            outline: none;
             font-size: 16px;
             padding-top: 10px;
             padding-left: 10px;
