@@ -50,7 +50,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #fd5425;
+  background: #FF5B2E;
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
@@ -100,7 +100,7 @@ a {
 button, a {
   border-radius: 20px;
   border: none;
-  background: #fd5425;
+  background: #FF5B2E;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -141,8 +141,21 @@ button:focus {
           justify-content: center;
 }
 
+.right-side .powrot {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.right-side .powrot h6 {
+  font-size: 10px;
+}
+
 .right-side a {
-  color: #fd5425;
+  color: #FF5B2E;
   background-color: #fff;
   margin-top: 10px;
   border: none;

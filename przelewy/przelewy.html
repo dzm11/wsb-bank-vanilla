@@ -3,29 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Nav</title>
+    <title>WSB-Bank - przelewy</title>
     <link rel="stylesheet" href="../przelewy/css/style.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+1M +10D" });
+    } );
+    </script>
+
+
 </head>
 <body>
-    <nav>
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+    <div class="menu">
+        <div class="wrapper">  
+            <header>
+                <nav>
+                      <div class="hamburger">
+                        <div class="line" id="MyLine1"></div>
+                        <div class="line" id="MyLine2"></div>
+                        <div class="line" id="MyLine3"></div>
+                      </div>
+                  <ul class="nav-links">	
+                        <li><a href="#">Start</a></li>
+                        <li><a href="#">Przelewy</a></li>
+                        <li><a href="#">Usługi</a></li>
+                        <li><a href="../login_2/login.html" class="button1">Wyloguj się</a></li>
+                    </ul>
+                  </nav>
+              </header>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Projects</a></li>
-        </ul>
-      </nav>
+    </div>
 
-    <section class="landing">
-        <img src="../strona_glowna/img/sygnet.svg" alt="owl">
-        <h1>WSB Bank</h1>
-    </section>
+    <div class="credit-card">
+        <div class="wrapper">
+            <div class="card-content">
+                <div class="account-info">
+                    <h1>Konto direct</h1>
+                    <div class="stan">
+                        <h5>Stan konta:</h3>
+                        <h6>5000.00 PLN</h6>
+                    </div>
+
+                    <a class="button3" href="#">Edytuj dane</a>
+                </div>
+                <div class="card-image">
+                    <div class="card-info">
+                        <h4>Card Number</h4>
+                        <h6>00 1111 2222 3333 4444 5555 6666</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="transfer">
+        <div class="wrapper">
+            <div class="transfer-label">
+                <h1>
+                    Przelew zwykły z:
+                </h1>
+            </div>
 
 
+            <div class="transfer-form">
+                <div class="form">
+                    <form action="#">
+
+                        <div class="col col-a"> 
+                            <div class="transfer-card">
+                                <h3>Konto zwyczajne</h3>
+                                <h4>Card Number</h4>
+                                <h6>00 1111 2222 3333 4444 5555 6666</h6>
+                            </div>
+                        </div>
+                    <div class="col-2">
+                        <div class="col col-b">   
+                            <div class="form-item">
+                                <label for="">Nr rachunku:</label>
+                                <input type="text">
+                                <h4>Raiffeisen Bank Polska SA</h4>
+                            </div>
+                            <div class="form-item">
+                                <label for="">Nazwa i adres odbiorcy:</label>
+                                <textarea name="" id="" cols="30" rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col col-c"> 
+                            <div class="form-item">
+                                <label for="">Kwota:</label>
+                                <input type="text">
+                                <h4>Na twoim koncie zostanie: </h4>
+                            </div>
+                            <div class="form-item">
+                                <label for="">Tytuł:</label>
+                                <textarea name="" id="" cols="30" rows="7"></textarea>
+                            </div>
+                            <div class="form-item last-one">
+                                <label for="">Data:</label>
+                                <input type="text" id="datepicker">
+                                <div class="panel-button">
+                                    <button type="submit" value="Submit" class="wykonaj">Wykonaj</button>
+                                    <button type="reset" class="anuluj">Anuluj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="wrapper">
+            <div class="lista">
+                <h1>Historia</h1>
+                <table>
+                    <tr>
+                      <th class="data">Data</th>
+                      <th class="opis">Opis</th> 
+                      <th class="kwota">Kwota</th>
+                      <th class="saldo">Saldo po transakcji</th>
+                    </tr>
+                    <tr>
+                      <td class="data">23.05.2020</td>
+                      <td class="opis">Maka woda sol Poznan PL <br><span>Przelewik za mieszkanie</span> </td> 
+                      <td class="kwota">-500.00 PLN</td>
+                      <td class="saldo">2500.00 PLN</td>
+                    </tr>
+                  </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="icon-set">
+                <ul class="footer-icon">
+                    <li>
+                        <a href="https://www.facebook.com"><img src="../strona_glowna/img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.pl"> <img src="../strona_glowna/img/instagram.svg" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.pl"> <img src="../strona_glowna/img/twitter.svg" alt="twitter"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text"><h5>© 2020 Copyright: </h5><span>WSB Bank</span></div>
+
+        </div>
+    </div>
     <script src="../przelewy/js/script.js"></script>
 </body>
 </html>

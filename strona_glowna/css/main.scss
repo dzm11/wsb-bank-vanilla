@@ -2,10 +2,11 @@
 
 *,*::before,*::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     background: white;
     color: #333;
     font-family: 'Montserrat', sans-serif;
@@ -36,15 +37,54 @@ ul{
     max-width: 1200px;
     margin: 0 auto;
 }
- 
+/* NAVBAR */
 header{
-    background: url('../img/sygnet.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 3em;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    background: url('../img/logo.svg');
+    background-repeat: no-repeat;
+}
+nav{
+
+
+    height: 100%;
+
+}
+.nav-links{
+    .button1{
+        border-radius: 20px;
+        border: none;
+        background: #fd5425;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 36px;
+        letter-spacing: 1px;
+    }
+    .button2{
+        border-radius: 20px;
+        border: 1px solid #FF5B2E;
+        color: #FF5B2E;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 36px;
+        letter-spacing: 1px;
+    }
+    
+    display: flex;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    li,a{
+        margin-left: 10px;
+        color:#333;
+        text-decoration: none;
+        font-size: 12px;
+    }
+}
+/* KONIEC NAVBAR */
+header{
 
     .sygnet{
         width: 3em;
@@ -59,8 +99,9 @@ header{
 }
 
 .hero-content{
-    margin: 4em 0 2em;
+    margin: 5em 0 0;
     h1{
+        margin-bottom: .7em;
         color: #333;
         font-weight: bold;
         font-size: 1.9em;
@@ -93,7 +134,9 @@ header{
     background-color: #fd5425;
     text-align: center;
     height: 20em;
+    
     h1{
+        margin-bottom: .7em;
         color: white;
         font-weight: bold;
         font-size: 1.4em;
@@ -103,13 +146,12 @@ header{
         color: white;
         font-weight: 400;
         font-size: 1em;
-
-            br{
-                display: none;
-            }
+        
+        br{
+            display: none;
+        }
     }
 }
-
 .icon{
     text-align: center;
     display: grid;
@@ -118,70 +160,214 @@ header{
     justify-content: space-around;
     margin-top: 3em;
     align-items: center;
-
     img{
-        
         margin-bottom: 1em;
         height: 7em;
     }
-
     strong{
         margin-bottom: .75em;
         display: block;
         font-size: 1.4em;
-    
     }
-
     span{
         margin-bottom: 1em;
         display: block;
         font-size: 1em;
     }
 }
-
-@media(min-width: 550px){
-    header{
-        background: url('../img/logo.svg');
-        background-repeat: no-repeat;
-        ul {
-            li a {
-                padding: 0 1em;
+.footer{
+    
+    display: flex;
+    background-color: #FF5B2E;
+    height: 135px;
+    color: white;
+    margin-top: 60px;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .icon-set{
+            ul{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                li{
+                    margin: 10px;
+                    text-align: center;
+                    width: 25px;
+                }
             }
         }
     }
-    .wrapper{
-        padding: 1.5em 4em;
-    }
-    .background-wrapper{
-        height: 100%;
-        background: url('../img/bg-hero.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-    .hero-wrapper{
-
-        text-align: left;
-    }
-    .orange-box{
-         h2{        
-             br{
-                 display: block;
-             }
-         }
-
+    .text{
+        margin-top: 10px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        h5{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        span{
+            margin-left: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
     }
 }
+/* navbar mobile */
+@media (max-width:799px){
+    header{
+        display: block;
+    }
+    .line{
+        width: 25px;
+        height: 2px;
+        background: #FF5B2E;
+        margin: 5px;
+        transition: background-color .5s ease-in-out;
+    }
+    .line.open{
+        background: #fff;  
+    }
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    .nav-links{
+        position: fixed;
+        background: #FF5B2E;
+        height: 110%;
+        width: 140%;
+        flex-direction: column;
+        clip-path: circle(0px at 100% 0%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        justify-content: space-around;
+        top: -5%;
+        left: -20%;
+        padding: 60px 0;
+        a{ 
+            margin:0;
+            padding: 0;
+            color: #fff;
+        }
+        li{
+            .button1, .button2{
+                border: none;
+                background:none;
+                color: #fff;
+                font-size: 20px;
+                font-weight: normal;
+                padding: 0;
+                letter-spacing: 0;
+            }
+        }
+    }
+li{
+    .button1, .button2{
+        border: none;
+        background:none;
+        color: #fff;
+        font-weight: normal;
+        padding: 0;
+        letter-spacing: 0;
+    }
+}
+    .nav-links.open{
+        clip-path: circle(1600px at 100% 0%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+      }
+      .nav-links li a {
+        font-size: 20px;
+      }
+      .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.1s;
+      }
+      .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.2s;
+      }
+      .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.3s;
+      }
+      .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.4s;
+      }
+      .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.5s;
+      }
+      li.fade {
+        margin-left:0px;
+        opacity: 1;
+      }
+}
+/* koniec navbar mobile */
+@media(min-width:500px){
+    .orange-box{
+        h2{        
+            br{
+                display: block;
+            }
+        }
+    }
+}
+
+@media(min-width: 660px){
+    header{
+        background: url('../img/logo.svg');
+        background-repeat: no-repeat;
+        }
+    .background-wrapper{
+
+        padding: 1.5em 2em;
+        }
+    }
+
+    @media(min-width: 800px){
+        header{
+            justify-content: flex-end;
+            nav{
+                position: static;
+                display: flex;
+            }
+        }
+        .wrapper{
+            padding: 1.5em 4em;
+        }
+        .background-wrapper{
+            height: 100%;
+            background: url('../img/bg-hero.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            padding: 1.5em 1em;
+        }
+        .hero-wrapper{
+            text-align: left;
+        }
+    }
 @media(min-width: 850px){
     .hero-content{
         h1{
-            font-size: 2.2em;
+            font-size: 2.1em;
         }
         .subtitle{
             font-size: 1.1em;
         }
     }
-
+    .background-wrapper{
+        padding: 1.5em 2em;
+    }
     .hero-wrapper{
         
         height: 45em;
@@ -199,7 +385,11 @@ header{
             font-size: 1.3em;
         }
     }
-
+}
+@media(min-width: 1000px){
+    .background-wrapper{
+        padding: 1.5em 4em;
+    }
 }
 @media(min-width: 1150px){
     .icon{
